@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --border: 30 20% 80%;
+    --background: 40 44% 92%;
+    --foreground: 27 29% 22%;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-creme text-tinte font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-rost;
+  }
+
+  input, textarea, select {
+    @apply text-tinte;
+  }
+}
+
+@layer components {
+  .karte {
+    @apply bg-beige rounded-2xl px-4 py-4;
+  }
+
+  .linie {
+    @apply border-tinte/15;
+  }
+
+  .pill {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-colors;
+  }
+
+  .pill-primaer {
+    @apply pill bg-terra text-creme active:bg-rost;
+  }
+
+  .pill-hell {
+    @apply pill bg-creme text-tinte border border-tinte/20 active:bg-beige;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-semibold leading-4;
+  }
+}
